@@ -56,15 +56,36 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5uG-ys-O4x">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lVD-Ii-UtR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lVD-Ii-UtR">
+                            <connections>
+                                <segue destination="dPE-xk-jmd" kind="show" id="Jx8-RF-Sl2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="M3c-7p-Lyj" id="eSC-91-OPe"/>
+                        <segue destination="dPE-xk-jmd" kind="show" identifier="cellSegue" id="qAW-TW-y4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="XMB-1V-Ae5">
+            <objects>
+                <viewController id="dPE-xk-jmd" customClass="InputViewController" customModule="R_TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jau-CB-Dow">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="f7C-P0-XaQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ne8-df-42p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJ3-ru-UB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2097" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vO1-bY-nKI">
@@ -85,4 +106,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qAW-TW-y4l"/>
+    </inferredMetricsTieBreakers>
 </document>
